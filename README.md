@@ -3,36 +3,64 @@
 A simple Streamlit web app that predicts the next word in a sentence using a trained LSTM (Long Short-Term Memory) neural network, built with TensorFlow/Keras.
 
 How it works
-Type in a sequence of words (e.g. To be or not to)
+
+Type in a sequence of words (e.g. To be or not to) 
+
 The app tokenizes your text using a pre-trained tokenizer
+
 A trained LSTM model predicts the most likely next word
+
 The predicted word is displayed on screen
+
+
+
 Project structure
+
 LSTM RNN/
+
 ├── app.py                 # Streamlit app (entry point)
+
+
 ├── next_word_lstm.h5      # Trained LSTM model
+
+
 ├── tokenizer.pickle        # Fitted tokenizer used during training
+
+
 ├── hamlet.txt              # Training text corpus (Shakespeare's Hamlet)
+
+
 ├── EXPERIMENT.IPYNB        # Notebook used to train the model
+
+
 └── README.md
+
 Requirements
+
+
 Python 3.10 (recommended — newer versions may have TensorFlow compatibility issues)
+
+
 TensorFlow 2.15.x (Apple Silicon: tensorflow-macos + tensorflow-metal)
+
+
 Streamlit
 NumPy
 
 See requirements.txt for exact versions.
 
+
+
+
 Setup
 Create and activate a virtual environment (recommended: Python 3.10)
 bash
-   conda create -n stable_environment python=3.10 -y
-   conda activate stable_environment
+   conda create -n environment python=3.10 -y
+   conda activate environment
 Install dependencies
 bash
    pip install -r requirements.txt
 
-Apple Silicon (M1/M2/M3) users: use tensorflow-macos and tensorflow-metal instead of plain tensorflow — the generic PyPI build is not reliably compiled for arm64 and can cause the app to crash on load.
 
 Run the app
 bash
